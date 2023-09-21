@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Herencia_Ejemplo">
+  <ClassDiagramComponents>
+    <Class name="Hotel" package="" visibility="public" xPosition="38.0" yPosition="17.0">
+      <Fields>
+        <Field name="roomCant" type="Integer" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Hotel" returnType="void" visibility="public">
+          <Argument type="Integer" name="roomCant"/>
+        </Method>
+        <Method name="getRoomCant" returnType="int" visibility="public"/>
+        <Method name="setRoomCant" returnType="int" visibility="public">
+          <Argument type="int" name="roomCant"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Hotel1" package="" visibility="public" xPosition="330.0" yPosition="90.0">
+      <Fields>
+        <Field name="precio" type="Double" visibility="protected"/>
+        <Field name="superficie" type="Double" visibility="protected"/>
+        <Field name="bano" type="boolean" visibility="protected"/>
+        <Field name="ascensor" type="boolean" visibility="protected"/>
+        <Field name="calefaccion" type="boolean" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Hotel1" returnType="int" visibility="public">
+          <Argument type="Double" name="precio"/>
+          <Argument type="Double" name="superficie"/>
+          <Argument type="Integer" name="roomCant"/>
+        </Method>
+        <Method name="untitledMethod1" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Hotel2" package="" visibility="public" xPosition="17.0" yPosition="321.0">
+      <Fields>
+        <Field name="cajaSeguridad" type="boolean" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Hotel2" returnType="void" visibility="public">
+          <Argument type="Double" name="precio"/>
+          <Argument type="Double" name="superficie"/>
+          <Argument type="Integer" name="roomCant"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Hotel3" package="" visibility="public" xPosition="402.0" yPosition="469.0">
+      <Fields>
+        <Field name="aireAcondicionado" type="boolean" visibility="protected"/>
+        <Field name="bar" type="boolean" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Hotel3" returnType="int" visibility="public">
+          <Argument type="Double" name="precio"/>
+          <Argument type="Double" name="superficie"/>
+          <Argument type="int" name="cantidadHabitaciones"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Hotel4" package="" visibility="public" xPosition="42.0" yPosition="499.0">
+      <Fields>
+        <Field name="miniBarHabitacion" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Hotel4" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Hotel2" target="Hotel1"/>
+    <IsRelation name="is" source="Hotel1" target="Hotel"/>
+    <IsRelation name="is" source="Hotel3" target="Hotel2"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

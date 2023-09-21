@@ -1,0 +1,4 @@
+Services\Funcionalidad.class
+Entities\Laberinto.class
+com\mycompany\juego_laberinto\Juego_Laberinto.class
+Services\LabService.class

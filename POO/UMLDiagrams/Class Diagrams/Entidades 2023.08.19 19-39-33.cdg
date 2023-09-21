@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Entidades">
+  <ClassDiagramComponents>
+    <Class name="Alumno" package="Entidades" visibility="public" xPosition="221.0" yPosition="83.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="notas" type="List&lt;Integer&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

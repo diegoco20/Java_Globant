@@ -1,0 +1,6 @@
+com\mycompany\relations_extra_ej2\Relations_Extra_Ej2.class
+Enums\Filas.class
+Entities\Cine.class
+Entities\Espectador.class
+Enums\Columnas.class
+Entities\Pelicula.class

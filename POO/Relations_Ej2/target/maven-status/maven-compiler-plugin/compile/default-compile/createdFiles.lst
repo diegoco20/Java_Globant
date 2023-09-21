@@ -1,0 +1,4 @@
+com\mycompany\relations_ej2\Relations_Ej2.class
+Entities\Juego.class
+Entities\Jugador.class
+Entities\Revolver.class

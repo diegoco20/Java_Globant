@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Servicios">
+  <ClassDiagramComponents>
+    <Class name="AlumnoService" package="Servicios" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="alumnos" type="ArrayList&lt;Alumno&gt;" visibility="private"/>
+        <Field name="sc" type="Scanner" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearAlumno" returnType="Alumno" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
