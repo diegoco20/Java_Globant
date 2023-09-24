@@ -2,17 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Entidad;
+package Entidades;
 
 /**
  *
- * @author jupac
+ * @author diego
  */
-public class Consola extends PartesArmadura {
-
-    public Consola() {
-        this.consumo=20000;
+public class Sintetizador extends ElementosArmadura {
+    public Sintetizador() {
+        this.consumo=30000;
         this.esta_danado=false;
     }
-    
 }

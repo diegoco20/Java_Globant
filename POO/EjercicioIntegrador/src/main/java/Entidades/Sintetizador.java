@@ -11,8 +11,25 @@ package Entidades;
 public class Sintetizador extends ElementosArmadura {
     
     public  Sintetizador (){
-        this.consumo = 100;
+        this.consumo = 400;
         this.danado = false;
     }
+
+    public boolean isDanado() {
+        return danado;
+    }
+
+    public void setDanado(boolean danado) {
+        this.danado = danado;
+    }
+
+    public int getConsumo() {
+        return consumo;
+    }
+
+    public void setConsumo(int consumo) {
+        this.consumo = consumo;
+    }
+    
     
 }

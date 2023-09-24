@@ -14,5 +14,23 @@ public class Consola extends ElementosArmadura {
         this.consumo = 500;
         this.danado = false;
     }
+
+    public boolean isDanado() {
+        return danado;
+    }
+
+    public void setDanado(boolean danado) {
+        this.danado = danado;
+    }
+
+    public int getConsumo() {
+        return consumo;
+    }
+
+    public void setConsumo(int consumo) {
+        this.consumo = consumo;
+    }
+    
+    
     
 }

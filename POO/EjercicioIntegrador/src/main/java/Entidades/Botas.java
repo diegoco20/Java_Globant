@@ -8,6 +8,28 @@ package Entidades;
  *
  * @author diego
  */
-public class Botas {
+public class Botas extends ElementosArmadura {
+    
+    public  Botas (){
+        this.consumo = 200;
+        this.danado = false;
+    }
+
+    public boolean isDanado() {
+        return danado;
+    }
+
+    public void setDanado(boolean danado) {
+        this.danado = danado;
+    }
+
+    public int getConsumo() {
+        return consumo;
+    }
+
+    public void setConsumo(int consumo) {
+        this.consumo = consumo;
+    }
+    
     
 }
