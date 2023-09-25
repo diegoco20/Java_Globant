@@ -13,4 +13,9 @@ public class Objetos {
     private int y;
     private int z;
     private boolean hostil;
+
+    public Objetos() {
+    }
+    
+    
 }
