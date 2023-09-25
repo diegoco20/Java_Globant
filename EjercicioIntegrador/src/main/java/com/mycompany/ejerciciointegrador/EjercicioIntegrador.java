@@ -19,5 +19,7 @@ public class EjercicioIntegrador {
             jarvis.getArm().correr(5);
             jarvis.MostrarEstadoBateria();
         }
+        
+        
     }
 }

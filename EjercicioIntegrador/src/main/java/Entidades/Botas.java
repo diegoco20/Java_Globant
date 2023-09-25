@@ -12,9 +12,11 @@ public class Botas extends ElementosArmadura {
     private static double consumo_acumulado;
     
     public Botas() {
+        elemento = "Botas";
         consumo=100000;
         esta_danado=false;
         consumo_acumulado = 0;
+        destruido = false;
     }
     
     public boolean getEsta_danado() {

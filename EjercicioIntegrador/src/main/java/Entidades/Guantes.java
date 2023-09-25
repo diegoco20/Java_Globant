@@ -10,8 +10,10 @@ package Entidades;
  */
 public class Guantes extends ElementosArmadura {
     public Guantes() {
+        elemento = "Guantes";
         this.consumo=100000;
         this.esta_danado=false;
+        destruido = false;
     }
 
 }

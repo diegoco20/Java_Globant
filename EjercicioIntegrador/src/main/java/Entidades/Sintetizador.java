@@ -10,7 +10,9 @@ package Entidades;
  */
 public class Sintetizador extends ElementosArmadura {
     public Sintetizador() {
+        elemento = "Sintetizador";
         this.consumo=30000;
         this.esta_danado=false;
+        destruido = false;     
     }
 }

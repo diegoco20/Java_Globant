@@ -49,6 +49,11 @@ public class Armadura {
     public void caminar(int tiempo_segundos){
         try {
             //Evalua si el elemento se puede utilizar 
+            //Si está destruido no se puede usar más
+            if (botas.destruido){
+                throw new Exception("Las botas están destruidas...");
+            }
+            
             if (botas.esta_danado){
                 throw new Exception("Las botas están dañadas...");
             }
@@ -113,6 +118,10 @@ public class Armadura {
        
         try {
             //Evalua si el elemento se puede utilizar 
+            //Si está destruido no se puede usar más
+            if (botas.destruido){
+                throw new Exception("Las botas están destruidas...");
+            }
             if (botas.esta_danado){
                 throw new Exception("Las botas están dañadas...");
             }

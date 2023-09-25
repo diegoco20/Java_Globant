@@ -8,11 +8,9 @@ package Entidades;
  *
  * @author diego
  */
-public class Consola extends ElementosArmadura{
-    public Consola() {
-        elemento = "Consola";
-        this.consumo=20000;
-        this.esta_danado=false;
-        destruido = false;
-    }
+public class Objetos {
+    private int x;
+    private int y;
+    private int z;
+    private boolean hostil;
 }

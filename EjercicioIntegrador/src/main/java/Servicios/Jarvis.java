@@ -5,6 +5,8 @@
 package Servicios;
 
 import Entidades.Armadura;
+import Entidades.ElementosArmadura;
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -76,32 +78,91 @@ public class Jarvis {
         System.out.println("  Generador: " + arm.getGenerador());
         System.out.println("  Bateria: " + arm.getBateria() + "%");
         System.out.println("");
-        if (arm.getBotas().getEsta_danado()){
-            System.out.println("  Botas: <Dañadas>");
-        } else {
-            System.out.println("  Botas: <Funcionando>");
-        }
-        if (arm.getGuantes().estaDanado()){
-            System.out.println("  Guantes: <Dañados>");
-        } else {
-            System.out.println("  Guantes: <Funcionando>");
-        }
-        if (arm.getConsola().estaDanado()){
-            System.out.println("  Consola: <Dañada>");
-        } else {
-            System.out.println("  Consola: <Funcionando>");
-        }
-        if (arm.getSintetizador().estaDanado()){
-            System.out.println("  Sintetizador: <Dañado>");
-        } else {
-            System.out.println("  Sintetizador: <Funcionando>");
+        
+        ArrayList<ElementosArmadura> dispositivos = new ArrayList<>();
+        dispositivos.add(arm.getBotas());
+        dispositivos.add(arm.getGuantes());
+        dispositivos.add(arm.getConsola());
+        dispositivos.add(arm.getSintetizador());
+        
+        
+        for (ElementosArmadura dispositivo : dispositivos){
+            if (dispositivo.getDestruido()){
+                System.out.println(dispositivo.getDispositivo() + " : <Destruido>");
+            } else {
+                if (dispositivo.estaDanado()){
+                    System.out.println(dispositivo.getDispositivo() + " : <Dañado>");
+                } else {
+                    System.out.println(dispositivo.getDispositivo() + " : <Funcionando>");
+                }
+            }       
         }
         
     }
+    
+    public void repararDispositivo(ElementosArmadura dispositivo){
+        try {
+            System.out.println("Intentando reparar dispositivo...");
+            if(!dispositivo.estaDanado()){
+                throw new Exception ("El dispositivo no está dañado...");
+            } else {
+                if (probabilidadReparacion()){
+                   dispositivo.setEstaDanado(false);
+                   System.out.println("Dispositivo reparado exitosamente");
+                   System.out.println(dispositivo.getDispositivo() + ": <Funcionando>" );
+                } else {
+                   System.out.println("Error al reparar el dispositivo");
+                }
+            }
+            
+        } catch (Exception e) {
+            e.getMessage();
+        }
+    }
+    
+    
+    public void revisarDispositivos(){
+        ArrayList<ElementosArmadura> dispositivos = new ArrayList<>();
+        dispositivos.add(arm.getBotas());
+        dispositivos.add(arm.getGuantes());
+        dispositivos.add(arm.getConsola());
+        dispositivos.add(arm.getSintetizador());
+        
+        
+        for (ElementosArmadura dispositivo : dispositivos){
+            try {
+                if (dispositivo.getDestruido()){
+                    System.out.println(dispositivo.getDispositivo() + ": <Destruido> ");
+                    throw new Exception();
+                }
+                if (dispositivo.estaDanado()) {
+                    System.out.println(dispositivo.getDispositivo() + ": <Dañado> ");
+                    //Se intenta reparar el dispositivo iterativamente con una probabilidad del 30% de daño total.                
+                    while (dispositivo.estaDanado()) {
+                        System.out.println("Intentando reparar el dispositivo...");
+
+                        //Se estima la probabilidad del evento destruir dispositivo 
+                        if (probabilidadDanio()) {
+                            dispositivo.setDestruido(true); //El evento ocurre se destruye dispositivo
+                            System.out.println("Error en el sistema...");
+                            throw new Exception("El dispositivo se ha destruido");
+                        } else {
+                            repararDispositivo(dispositivo);
+                        }
+                    }
+                } else {
+                    System.out.println(dispositivo.getDispositivo() + ": <Funcionando> ");
+                }
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
     //Métodos para aleatorizar el posible arreglo o daño de los elementos durante su uso
     public boolean probabilidadDanio() {
         Random random = new Random();
-        return arm.getBotas().getEsta_danado();
+        return random.nextDouble() < 0.3;
     }
 
     public boolean probabilidadReparacion() {
