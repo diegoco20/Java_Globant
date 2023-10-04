@@ -13,7 +13,9 @@ public class Objetos {
     private int y;
     private int z;
     private boolean hostil;
-
+    private int distancia;
+    private int resistencia;
+    
     public Objetos() {
     }
     
